@@ -15,7 +15,7 @@ public class Main {
 
         switch (gameSelect){
             case 1 :
-                GuessANumber.numberGame();
+                GuessANumber.numberGameDifficulty();
                 break;
             case 4 :
                 System.exit(0);
