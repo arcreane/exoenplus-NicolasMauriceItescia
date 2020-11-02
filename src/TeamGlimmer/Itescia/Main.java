@@ -14,19 +14,15 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int gameSelect = sc.nextInt();
 
-        switch (gameSelect){
-            case 1 :
-                GuessANumber.numberGameDifficulty();
-                break;
-            case 2 :
-                Palyndrome.palyndromeGame();
-                break;
-            case 4 :
-                System.exit(0);
-                break;
-            default:
+        switch (gameSelect) {
+            case 1 -> GuessANumber.numberGameDifficulty();
+            case 2 -> Palyndrome.palyndromeGame();
+            case 3 -> ArrayNumbersGame.arrayFillGame();
+            case 4 -> System.exit(0);
+            default -> {
                 System.out.println("Please enter a valid input");
                 main(null);
+            }
         }
     }
 }

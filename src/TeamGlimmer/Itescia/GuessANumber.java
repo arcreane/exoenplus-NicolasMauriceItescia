@@ -29,7 +29,7 @@ public class GuessANumber {
 
     public static void numberGame (boolean dif){
         int targetNumber = (int)(Math.random()*100);
-        for(int i=0;i>-1;i++){
+        for(int i=0;i<=100;i++){
             System.out.println("Please input a number, you are on try #"+(i+1));
             Scanner sc2 = new Scanner(System.in);
             int numberGuessed = sc2.nextInt();
@@ -45,14 +45,14 @@ public class GuessANumber {
                     System.out.print("But you're close !");
                 }
             }
-            else if (numberGuessed < targetNumber){
+            else {
                 System.out.println("The number you're looking for is higher !");
                 if (targetNumber-numberGuessed <= 10){
                     System.out.print("But you're close !");
                 }
             }
 
-            if (dif == true&& i==9){
+            if (dif && i==9){
                 System.out.println("Sorry, but you lost the game ! The number was: "+targetNumber);
                 Main.main(null);
                 break;
